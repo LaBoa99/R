@@ -1,0 +1,15 @@
+Identificador,Edad,Estudia,Ratio de credito,Compra
+1,alta,no,aceptable,no
+2,alta,no,excelente,no
+3,alta,no,aceptable,si
+4,media,no,aceptable,si
+5,baja,si,aceptable,si
+6,baja,si,excelente,no
+7,baja,si,excelente,si
+8,baja,no,aceptable,no
+9,alta,si,aceptable,si
+10,media,si,aceptable,si
+11,media,si,excelente,si
+12,media,no,excelente,si
+13,alta,si,aceptable,si
+14,baja,no,aceptable,no
