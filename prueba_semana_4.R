@@ -67,6 +67,8 @@ anyNA(miceOutput)
 actuals <- original$ptratio[is.na(BostonHousing$ptratio)]
 predictedsMICE <- miceOutput[is.na(BostonHousing$ptratio), "ptratio"]
 regr.eval(actuals, predictedsMICE)
+stripplot(predictedsMICE)
+plot(predictedsMICE)
 
 
 # RETOOOOOOOOOOOOOOOOOOOO
