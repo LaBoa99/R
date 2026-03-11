@@ -1,4 +1,3 @@
-
 euclides <- function(ti, tj, w){
   sqrt( w * (ti[1] - tj[1])^2 + w * (ti[2] - tj[2])^2)
 }
@@ -23,10 +22,22 @@ str(USArrests)
 
 datos <- scale(USArrests)
 
-fviz_nbclust(datos, means, method = "wss")
+fviz_nbclust(datos, kmeans, method = "wss")
+
 set.seed(123)
 k <- 4
 
 modelo_kmeans <- kmeans(datos, centers = k, nstart = 25)
-print(modelo_kmeans)
-fviz_cluster(modelo_kmeans, data = datos, ellipse.type = "convex", palette = "jco", ggtheme = theme_minimal())
+
+fviz_cluster(
+  modelo_kmeans,
+  data = datos,
+  ellipse.type = "convex",
+  palette = "jco",
+  ggtheme = theme_minimal()
+)
+
+resultado <- as.data.frame(datos)
+resultado$cluster <- modelo_kmeans$cluster
+
+write.csv(resultado, "clusters_USArrests.csv", row.names = TRUE)
