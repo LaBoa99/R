@@ -40,3 +40,10 @@ rules <- set(
 system <- fuzzy_system(variables, rules)
 
 plot(system)
+
+fi <- fuzzy_inference(system, list(temperature = 75, humidity = 0, precipitation = 70))
+
+plot(fi)   
+
+gset_defuzzify(fi, "centroid")
+
