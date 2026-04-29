@@ -8,7 +8,7 @@ datos <- scale(datos)
 fviz_nbclust(datos, kmeans, method = "wss")
 
 set.seed(123)
-k <- 4
+k <- 3
 
 modelo_kmeans <- kmeans(datos, centers = k, nstart = 25)
 
